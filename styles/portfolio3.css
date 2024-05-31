@@ -31,9 +31,12 @@
     transition: all 0s ease-out !important;
 }
 
-
+.wave-container{
+    height: 20px;
+}
 #wave-start{
-    fill: var(--green);
+    fill: url("#gradient-vertical");
+    /* fill: linear-gradient(180deg, var(--green) 0%,var(--green) 100%); */
     z-index: -5;
 }
 .green-bg{
@@ -73,7 +76,6 @@
     color: transparent;
     transition: all .25s ease-out;
     margin:auto;
-    margin-top:-240px;
     z-index: 5;
     max-width: 770px;
     padding: 24px 60px;
@@ -84,8 +86,8 @@
     opacity: 100%;
     border: 2px solid rgba(var(--purple-1-var), 1);
     color: #303030;
-    background-image: url(/images/textures/dots-inverted.svg);
-    background-size:32px;
+    background: url(/images/textures/dots-inverted.svg), rgba(255,255,255,.8);
+    background-size:64px;
     backdrop-filter: hue-rotate(180deg);
 }
 
