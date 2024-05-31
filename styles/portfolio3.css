@@ -27,27 +27,65 @@
 }
 
 /* branch-specific pls reorder */
+.u--no-animation{
+    transition: all 0s ease-out !important;
+}
+
+
+#wave-start{
+    fill: var(--green);
+    z-index: -5;
+}
+.green-bg{
+    background: var(--green);
+}
+.u--bounce-in{
+    transition: all .25s ease-out;
+    opacity: 0;
+    color: transparent;
+    transition: all .25s ease-out;
+    border:2px solid transparent;
+    margin-top:120px;
+    margin-bottom:0px;
+    transition: all .25s ease-out;
+    opacity: 100%;
+    border: 2px solid rgba(var(--purple-1-var), 1);
+    color: #303030;    color: #303030;
+    background-image: url(/images/textures/dots-inverted.svg);
+    background-size:32px;
+
+}
+
+.u--bounce-in--visible{
+    transition: all .25s ease-out;
+    opacity: 100%;
+    border: 2px solid rgba(var(--purple-1-var), 1);
+    color: #303030;    color: #303030;
+    background-image: url(/images/textures/dots-inverted.svg);
+    background-size:32px;
+    transform: translate(0, -120px);
+}
+
+
 
 .intro-blurb{
     font-size: 1em;
     color: transparent;
     transition: all .25s ease-out;
     margin:auto;
+    margin-top:-240px;
     z-index: 5;
     max-width: 770px;
     padding: 24px 60px;
-    margin-top:120px;
-    margin-bottom:-120px;
     border:2px solid transparent;
 }
 
 .intro-blurb--visible{
+    opacity: 100%;
     border: 2px solid rgba(var(--purple-1-var), 1);
     color: #303030;
     background-image: url(/images/textures/dots-inverted.svg);
     background-size:32px;
-    margin-top:-120px;
-    margin-bottom:120px;
     backdrop-filter: hue-rotate(180deg);
 }
 
@@ -112,7 +150,7 @@
 .stars-container{
     height: 100vh;
     min-height: fit-content;
-    max-height: 100vh;
+    max-height: 1200px;
     transition: max-height 2s;
     overflow: hidden;
 }
@@ -212,7 +250,7 @@ hr{
     display: block;
     height: 1px;
     border: 0;
-    border-top: 2px solid var(--purple-1);
+    border-top: 2px dashed var(--purple-1);
     margin: 1em 0;
     padding: 0;
     clear: both;
@@ -259,6 +297,8 @@ hr{
 }
 .skill{
     background-image: url(/images/textures/dots-inverted.svg);
+    border: 2px solid rgba(var(--purple-1-var), 1);
+
     background-size:32px;
     padding: 8px;
     border-radius: 5px;
@@ -771,7 +811,7 @@ ul.navlist a:focus{
     }
 }
 
-@media (max-height: 900px) {
+@media (max-height: 1000px) {
     .main--homepage{
         padding-top: 80px;
     }
@@ -789,7 +829,11 @@ ul.navlist a:focus{
         margin:auto;
     }
     .intro-blurb--visible{
-        margin-top: 0;
+        transform: translate(0,0);
+    }
+
+    .u--bounce-in--visible{
+        transform: translate(0,0);
     }
 }
 
