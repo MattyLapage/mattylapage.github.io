@@ -21,9 +21,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //     },
     //     y: -120
     // });
-    gsap.to("#wave-start", {
+    gsap.to(".wave-start", {
         scrollTrigger: {
-            trigger: "#wave-start",
+            trigger: ".wave-start",
+            scrub: true,
+            markets: true,
+            Start: "20px 80%"
+        },
+        y: -800
+    })
+    gsap.to("#wave-end", {
+        scrollTrigger: {
+            trigger: "#wave-end",
             scrub: true,
             markets: true,
             Start: "20px 80%"
