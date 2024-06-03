@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //     },
     //     y: -120
     // });
-    gsap.to(".wave-start", {
+    gsap.to("#purple-wave", {
         scrollTrigger: {
             trigger: ".wave-start",
             scrub: true,
@@ -38,6 +38,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
             Start: "20px 80%"
         },
         y: -800
+    })
+    gsap.to(".star-burst",{
+        scrollTrigger: {
+            trigger: ".skills",
+            markers: true,
+            Start: "20px 100%"
+        },
+        stagger:.55,
+        scale: 1.5,
+        duration: 3,
+        rotation: "-=100"
     })
 // end: () => `+=${elem.offsetHeight}` // will be updated
 // const boxes = gsap.utils.toArray('.box');
